@@ -3,9 +3,8 @@ MAINTAINER rajesh salian <rajesh.salian@nuance.com>
 
 RUN yum install -y make
 RUN yum install -y openssh-clients
-RUN yum search sshpass
 
-RUN yum install -y sshpass.x86_64
+RUN yum localinstall -y sshpass-1.05-1.el6.x86_64.rpm
 
 RUN mkdir ~/.ssh/ && touch ~/.ssh/known_hosts
 COPY entrypoint-sshpass.sh
