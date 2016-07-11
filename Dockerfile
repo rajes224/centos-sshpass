@@ -12,5 +12,5 @@ COPY entrypoint-sshpass.sh /
 
 #ENTRYPOINT [ "/usr/bin/sshpass -p $(PASSWD) ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -n root@$(HOST) " ]
 #ENTRYPOINT [ 'exec' ]
-ENTRYPOINT [ '/entrypoint-sshpass.sh' ]
+#ENTRYPOINT [ '/entrypoint-sshpass.sh' ]
 #ENTRYPOINT [ '/usr/bin/sshpass' ]
